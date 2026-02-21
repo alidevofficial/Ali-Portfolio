@@ -49,7 +49,13 @@
 
         /* Preview */
         .preview { flex: 1.5; background: #050505; padding: 20px; border-radius: 25px; border: 1px solid #222; display: flex; justify-content: center; overflow: hidden; min-height: 800px; width: 100%; }
-        .paper { width: 210mm; min-height: 297mm; background: #fff; color: #000; display: flex; transform: scale(0.48); transform-origin: top center; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        .paper {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    color: #000;
+    display: flex;
+}
         .side { width: 35%; background: #111; color: #fff; padding: 40px 20px; text-align: left; }
         .main { width: 65%; padding: 45px; text-align: left; }
         .photo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #f00; margin: 0 auto 20px; overflow: hidden; background: #000; }
@@ -62,13 +68,27 @@
         @media (max-width: 850px) {
             .nav-links { display: none; }
             .cv-container { flex-direction: column; align-items: center; }
-            .paper { transform: scale(0.38); }
+            .paper {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    color: #000;
+    display: flex;
+}
             .preview { min-height: 520px; background: transparent; border: none; }
             .hero { padding-top: 100px; }
         }
         footer { padding: 40px; text-align: center; color: #444; font-size: 11px; width: 100%; border-top: 1px solid #111; }
     </style>
+
+<style>
+.preview .paper {
+    transform: scale(0.55);
+    transform-origin: top center;
+}
+</style>
 </head>
+
 <body>
 
     <nav>
@@ -256,10 +276,38 @@
             document.getElementById('oS').innerText = document.getElementById('iS').value;
             document.getElementById('oE').innerText = document.getElementById('iE').value;
         }
-        function downloadPDF() {
-            const element = document.getElementById('cv-output');
-            html2pdf().from(element).save('Ali_Ramzan_CV.pdf');
-        }
-    </script>
+        </script>
+
+<script>
+function downloadPDF() {
+    const source = document.getElementById('cv-output');
+
+    const clone = source.cloneNode(true);
+    clone.style.transform = 'none';
+    clone.style.width = '210mm';
+    clone.style.minHeight = '297mm';
+    clone.style.background = '#ffffff';
+    clone.style.color = '#000';
+
+    const wrap = document.createElement('div');
+    wrap.style.position = 'fixed';
+    wrap.style.left = '-9999px';
+    wrap.appendChild(clone);
+    document.body.appendChild(wrap);
+
+    const opt = {
+        margin: 0,
+        filename: 'Ali_Ramzan_CV.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 3, backgroundColor: '#ffffff' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(clone).save().then(() => {
+        document.body.removeChild(wrap);
+    });
+}
+</script>
 </body>
+
 </html>
