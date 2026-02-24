@@ -46,16 +46,12 @@
         .editor h4 { color: #f00; font-size: 11px; margin: 15px 0 8px; text-transform: uppercase; border-bottom: 1px solid #222; text-align: left; }
         input, textarea, select { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #222; background: #000; color: #fff; outline: none; }
         .btn { background: #f00; color: #fff; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: 900; text-transform: uppercase; width: 100%; margin-top: 10px; }
+        .btn-red { background: #f00; color: #fff; border: none; padding: 10px 22px; border-radius: 12px; cursor: pointer; font-weight: 900; text-transform: uppercase; display: inline-block; box-shadow: 0 8px 30px rgba(240,0,0,0.35); transition: transform .12s ease, box-shadow .12s ease; }
+        .btn-red:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(240,0,0,0.45); }
 
         /* Preview */
         .preview { flex: 1.5; background: #050505; padding: 20px; border-radius: 25px; border: 1px solid #222; display: flex; justify-content: center; overflow: hidden; min-height: 800px; width: 100%; }
-        .paper {
-    width: 210mm;
-    min-height: 297mm;
-    background: #ffffff;
-    color: #000;
-    display: flex;
-}
+        .paper { width: 210mm; min-height: 297mm; background: #fff; color: #000; display: flex; transform: scale(0.48); transform-origin: top center; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
         .side { width: 35%; background: #111; color: #fff; padding: 40px 20px; text-align: left; }
         .main { width: 65%; padding: 45px; text-align: left; }
         .photo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #f00; margin: 0 auto 20px; overflow: hidden; background: #000; }
@@ -68,27 +64,13 @@
         @media (max-width: 850px) {
             .nav-links { display: none; }
             .cv-container { flex-direction: column; align-items: center; }
-            .paper {
-    width: 210mm;
-    min-height: 297mm;
-    background: #ffffff;
-    color: #000;
-    display: flex;
-}
+            .paper { transform: scale(0.38); }
             .preview { min-height: 520px; background: transparent; border: none; }
             .hero { padding-top: 100px; }
         }
         footer { padding: 40px; text-align: center; color: #444; font-size: 11px; width: 100%; border-top: 1px solid #111; }
     </style>
-
-<style>
-.preview .paper {
-    transform: scale(0.55);
-    transform-origin: top center;
-}
-</style>
 </head>
-
 <body>
 
     <nav>
@@ -108,11 +90,11 @@
             <span>Professional Systems Developer</span>
         </div>
         <div class="socials">
-            <a href="https://wa.me/923000000000" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/923090002443" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/aliramzan92/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/alidevofficial/" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/AliDevOfficial/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
             
         </div>
     </section>
@@ -158,6 +140,7 @@
                     <option value="">Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
+                    <option value="Other">Other</option>
                 </select>
                 <input type="text" id="iT" placeholder="Job Title" oninput="upd()">
                 <input type="text" id="iF" placeholder="Father's Name" oninput="upd()">
@@ -169,7 +152,7 @@
                 <textarea id="iS" rows="3" placeholder="Professional Summary..." oninput="upd()"></textarea>
                 <textarea id="iE" rows="3" placeholder="Education Details..." oninput="upd()"></textarea>
 
-                <button class="btn" onclick="downloadPDF()">Download CV</button>
+                <button onclick="window.print()" class="btn-red" style="padding:8px 25px; font-size:12px;">Download CV</button>
             </div>
 
             <div class="preview">
@@ -276,38 +259,10 @@
             document.getElementById('oS').innerText = document.getElementById('iS').value;
             document.getElementById('oE').innerText = document.getElementById('iE').value;
         }
-        </script>
-
-<script>
-function downloadPDF() {
-    const source = document.getElementById('cv-output');
-
-    const clone = source.cloneNode(true);
-    clone.style.transform = 'none';
-    clone.style.width = '210mm';
-    clone.style.minHeight = '297mm';
-    clone.style.background = '#ffffff';
-    clone.style.color = '#000';
-
-    const wrap = document.createElement('div');
-    wrap.style.position = 'fixed';
-    wrap.style.left = '-9999px';
-    wrap.appendChild(clone);
-    document.body.appendChild(wrap);
-
-    const opt = {
-        margin: 0,
-        filename: 'Ali_Ramzan_CV.pdf',
-        image: { type: 'jpeg', quality: 1 },
-        html2canvas: { scale: 3, backgroundColor: '#ffffff' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().set(opt).from(clone).save().then(() => {
-        document.body.removeChild(wrap);
-    });
-}
-</script>
+        function downloadPDF() {
+            const element = document.getElementById('cv-output');
+            html2pdf().from(element).save('Ali_Ramzan_CV.pdf');
+        }
+    </script>
 </body>
-
 </html>
