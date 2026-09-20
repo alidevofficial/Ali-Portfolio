@@ -40,7 +40,7 @@ To run this tool locally on your computer:
    ```bash
    git clone [https://github.com/alidevofficial/agetimecalc.git](https://github.com/alidevofficial/agetimecalc.git)
 
-  ** Bash**
+  **Bash**
 cd agetimecalc
 
 👤 Author
