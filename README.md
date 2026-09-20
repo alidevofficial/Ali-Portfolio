@@ -48,3 +48,8 @@ Muhammad Ali Ramzan
 Live Portfolio: [Ali-Portfolio](https://github.com/alidevofficial/Ali-Portfolio/)
 
 GitHub: @alidevofficial
+
+📜 License 
+This project is proprietary and built for Age Time Calc. All rights reserved.
+
+Crafted with ❤️ for Ali Ramzan
