@@ -1,51 +1,51 @@
-# ⏳ Age & Time Calculator
+# 🌐 Personal Portfolio Website
 
-> A modern, responsive web application designed to calculate precise age, date differences, and time intervals with ease.
+> Official personal portfolio website showcasing my web development projects, creative interfaces, and technical skills.
 
-[![Live Site](https://img.shields.io/badge/Live_Site-Visit_App-brightgreen?style=for-the-badge&logo=google-chrome)](https://alidevofficial.github.io/agetimecalc/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/alidevofficial/agetimecalc)
+[![Live Site](https://img.shields.io/badge/Live_Site-Visit_Portfolio-brightgreen?style=for-the-badge&logo=google-chrome)](https://alidevofficial.github.io/Ali-Portfolio/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/alidevofficial/Ali-Portfolio)
 
 ---
 
 ## 🚀 Live Demo
 
-Check out the live web app here:  
-👉 **[alidevofficial.github.io/agetimecalc](https://alidevofficial.github.io/agetimecalc/)**
+Check out the live interactive website here:  
+👉 **[alidevofficial.github.io/Ali-Portfolio]**
 
 ---
 
 ## 🌟 Key Features
 
-- **Precise Calculation:** Quickly computes accurate age breakdown (years, months, days).
-- **Responsive Layout:** Works smoothly across mobile phones, tablets, and desktop screens.
-- **Interactive & Clean UI:** Simple, distraction-free interface with instant results.
-- **Fast & Lightweight:** Built using vanilla web technologies for zero lag.
+- **Responsive Design:** Fully optimized across mobile, tablet, and widescreen desktop layouts.
+- **Interactive UI:** Smooth transitions, modern animations, and intuitive navigation.
+- **Project Showcase:** Highlights key web development projects, automation tools, and creative work.
+- **Contact & Socials:** Quick access to reach out via socials and direct communication channels.
 
 ---
 
 ## 🛠️ Built With
 
-- **HTML5:** Semantic layout and clean structure.
-- **CSS3:** Modern styling, Flexbox/Grid layouts, and responsive elements.
-- **JavaScript (ES6+):** Core date parsing, time calculations, and dynamic DOM updates.
-- **GitHub Pages:** Fast and reliable hosting.
+- **HTML5:** Semantic document structure and accessibility.
+- **CSS3 / Modern Styling:** Custom styling, responsive Grid & Flexbox, smooth transitions.
+- **JavaScript (ES6+):** Interactive logic, UI controls, and event listeners.
+- **GitHub Pages:** Static hosting and continuous deployment.
 
 ---
 
-## 💻 Getting Started Locally
+## 💻 Local Setup & Development
 
-To run this tool locally on your computer:
+To view or edit this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/alidevofficial/agetimecalc.git](https://github.com/alidevofficial/agetimecalc.git)
+   git clone (https://github.com/alidevofficial/Ali-Portfolio.git)
 
   **Bash**
-cd agetimecalc
+cd Ali-Portfolio
 
 👤 Author
 Muhammad Ali Ramzan
 
-Live Portfolio: [Age Time Calc](https://agetimecalc.vercel.app/)
+Live Portfolio: [Ali-Portfolio]([https://github.com/alidevofficial/Ali-Portfolio/]
 
 GitHub: @alidevofficial
