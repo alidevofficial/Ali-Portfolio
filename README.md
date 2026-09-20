@@ -10,8 +10,7 @@
 ## 🚀 Live Demo
 
 Check out the live interactive website here:  
-👉 **[alidevofficial.github.io/Ali-Portfolio]**
-
+👉 **[alidevofficial.github.io/Ali-Portfolio](https://alidevofficial.github.io/Ali-Portfolio/)**
 ---
 
 ## 🌟 Key Features
@@ -38,7 +37,7 @@ To view or edit this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone (https://github.com/alidevofficial/Ali-Portfolio.git)
+   git clone https://github.com/alidevofficial/Ali-Portfolio.git
 
   **Bash**
 cd Ali-Portfolio
@@ -46,6 +45,6 @@ cd Ali-Portfolio
 👤 Author
 Muhammad Ali Ramzan
 
-Live Portfolio: [Ali-Portfolio]([https://github.com/alidevofficial/Ali-Portfolio/]
+Live Portfolio: [Ali-Portfolio](https://github.com/alidevofficial/Ali-Portfolio/)
 
 GitHub: @alidevofficial
